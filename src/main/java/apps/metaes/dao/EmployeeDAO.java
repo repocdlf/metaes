@@ -1,8 +1,8 @@
-package com.howtodoinjava.demo.dao;
+package apps.metaes.dao;
 
 import java.util.List;
 
-import com.howtodoinjava.demo.model.EmployeeVO;
+import apps.metaes.model.EmployeeVO;
 
 public interface EmployeeDAO 
 {

@@ -1,8 +1,8 @@
-package com.howtodoinjava.demo.service;
+package apps.metaes.service;
 
 import java.util.List;
 
-import com.howtodoinjava.demo.model.EmployeeVO;
+import apps.metaes.model.EmployeeVO;
 
 public interface EmployeeManager 
 {

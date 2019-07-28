@@ -1,12 +1,12 @@
-package com.howtodoinjava.demo.service;
+package apps.metaes.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.howtodoinjava.demo.dao.EmployeeDAO;
-import com.howtodoinjava.demo.model.EmployeeVO;
+import apps.metaes.dao.EmployeeDAO;
+import apps.metaes.model.EmployeeVO;
 
 @Service
 public class EmployeeManagerImpl implements EmployeeManager {

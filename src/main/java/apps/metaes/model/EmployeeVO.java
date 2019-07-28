@@ -1,4 +1,4 @@
-package com.howtodoinjava.demo.model;
+package apps.metaes.model;
 
 import java.io.Serializable;
 
