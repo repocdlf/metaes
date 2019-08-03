@@ -23,6 +23,7 @@
 			</tr>
 		</c:forEach>
 	</table>
-
+<hr>
+<a href="/metaes">Home</a>
 </body>
 </html>
