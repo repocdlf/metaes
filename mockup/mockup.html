@@ -71,8 +71,8 @@
                             <td>Roberto Pereyra</td>
                             <td>15-1234-1991</td>
                         </tr>
-                        <tr onclick="mostrarObservaciones('observaciones-r2')">
-                            <td>Erik Lamela</td>
+                        <tr onclick="mostrarCelula('celula-erik')">
+                            <td>Erik Rios</td>
                             <td>15-1234-1992</td>
                         </tr>
                         <tr onclick="mostrarObservaciones('observaciones-r3')">
@@ -94,9 +94,78 @@
                 </table>
             </div>
         </div>
+        <div id="celula-erik" class="row border" style="display: none">
+            <div class="col-sm-4 border">
+                <div class="card">
+                    <div class="card-header">CELULA DE ERIK</div>
+                </div>
+                <form>
+                    <div class="form-group row">
+                        <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="nombre" value="Erik Rios">
+                        </div>
+                        <label for="direccion" class="col-sm-2 col-form-label">Direccion:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="direccion" value="Av. San Juan 2020, Buenos Aires">
+                        </div>
+                        <label for="nivel" class="col-sm-2 col-form-label">Nivel:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="nivel" value="3">
+                        </div>
+                        <label for="lider" class="col-sm-2 col-form-label">Lider:</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="lider" value="Juan Perez">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-4 border">
+                <div class="card">
+                    <div class="card-header">CONCURRENTES</div>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <input id="input-concurrentes-erik" onkeyup="myFunction('input-concurrentes-erik','tabla-concurrentes-erik')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                    <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+                </div>
+                <table id="tabla-concurrentes-erik" class="table table-hover">
+                    <tbody>
+                        <tr onclick="mostrarObservaciones('observaciones-r1')">
+                            <td>Juan Manuel Vivaldi</td>
+                            <td>15-1234-1991</td>
+                        </tr>
+                        <tr onclick="mostrarObservaciones('observaciones-r2')">
+                            <td>Tomás Santiago</td>
+                            <td>15-1234-1992</td>
+                        </tr>
+                        <tr onclick="mostrarObservaciones('observaciones-r3')">
+                            <td>Pedro Ibarra</td>
+                            <td>15-1234-1998</td>
+                        </tr>
+                        <tr onclick="mostrarObservaciones('observaciones-r4')">
+                            <td>Leandro Tolini</td>
+                            <td>15-1234-1998</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-4 border">
+                <div class="card">
+                    <div class="card-header">OBSERVACIONES</div>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <input id="input-observaciones" onkeyup="myFunction('input-observaciones-erik','table-observaciones-erik')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                    <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+                </div>
+                <table id="tabla-observaciones-erik" class="table table-hover">
+                </table>
+            </div>
+        </div>
+        
+        
         <div id="encuentros" class="row border" style="display: none">no incluye datos de encuentros en esta etapa</div>
         <div id="bautismos" class="row border" style="display: none">no incluye datos de bautismos en esta etapa</div>
-        <div id="reportes" class="row border" style="display: none">en construccion</div>
+        <div id="reportes" class="row border" style="display: none">no incluye reportes en esta etapa</div>
 
         <div id="consolicaciones" class="row border">
             <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 border">
@@ -610,6 +679,9 @@
         document.getElementById("encuentros").style.display = "none";
         document.getElementById("bautismos").style.display = "none";
         document.getElementById("reportes").style.display = null;
+    }
+    function mostrarCelula(divIdCelula){
+    	document.getElementById(divIdCelula).style.display = null;
     }
 </script>
 </body>
