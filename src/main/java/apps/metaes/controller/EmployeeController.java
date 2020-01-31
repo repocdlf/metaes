@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import apps.metaes.service.EmployeeManager;
 
 @Controller
-@RequestMapping(value = "/employee-module", method = RequestMethod.GET)
+@RequestMapping(value = "/EmployeeController", method = RequestMethod.GET)
 public class EmployeeController 
 {
 	@Autowired

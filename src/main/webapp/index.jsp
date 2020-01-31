@@ -22,5 +22,7 @@
 <br>
 <a href="/employee-module/getAllEmployees">/employee-module/getAllEmployees</a>
 <br>
+<a href="/metaes/EmployeeController/getAllEmployees">/EmployeeController/getAllEmployees</a>
+<br>
 </body>
 </html>
