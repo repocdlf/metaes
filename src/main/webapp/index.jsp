@@ -15,5 +15,12 @@
   </form>
 </div><!--end log form -->
 <a href="/metaes/employee-module/getAllEmployees">/metaes/employee-module/getAllEmployees</a>
+<br>
+<a href="/metaes/getAllEmployees">/metaes/getAllEmployees</a>
+<br>
+<a href="/getAllEmployees">/getAllEmployees</a>
+<br>
+<a href="/employee-module/getAllEmployees">/employee-module/getAllEmployees</a>
+<br>
 </body>
 </html>
