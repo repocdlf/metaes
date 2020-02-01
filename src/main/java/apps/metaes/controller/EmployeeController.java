@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import apps.metaes.service.EmployeeManager;
 
 @Controller
-@RequestMapping(value = "/EmployeeController", method = RequestMethod.GET)
+@RequestMapping(value = "/EmployeeController", method = RequestMethod.POST)
 public class EmployeeController 
 {
 	@Autowired
 	EmployeeManager manager;
 
-	@RequestMapping(value = "/getAllEmployees", method = RequestMethod.GET)
+	@RequestMapping(value = "/getAllEmployees", method = RequestMethod.POST)
 	public String getAllEmployees(Model model)
 	{
 		model.addAttribute("employees", manager.getAllEmployees());
