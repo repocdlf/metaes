@@ -41,7 +41,7 @@
         <p class="card-text">Acompañamiento, asistencia y ayuda a la mujer embarazada en situacion de riesgo.</p>
         <form role="form" autocomplete="on" class="form" method="post" action="/metaes">
             <div class="form-group">
-              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver más" type="submit">
+              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver Más" type="submit">
             </div>
         </form>
       </div>
@@ -58,7 +58,7 @@
         <p class="card-text">Informacion para contactarse con el programa de ayuda para la recuperacion de las adicciones.</p>
         <form role="form" autocomplete="on" class="form" method="post" action="/metaes">
             <div class="form-group">
-              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver más" type="submit">
+              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver Más" type="submit">
             </div>
         </form>
       </div>
@@ -98,7 +98,7 @@
         <p class="card-text">Obtener datos desde el backend controller.</p>
         <form role="form" autocomplete="on" class="form" method="post" action="/metaes/EmployeeController/getAllEmployees">
             <div class="form-group">
-              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver más" type="submit">
+              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver Datos" type="submit">
             </div>
         </form>
       </div>
