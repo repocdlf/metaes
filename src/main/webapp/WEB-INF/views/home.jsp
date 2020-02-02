@@ -15,7 +15,7 @@
 <div class="row">
 
   <div class="col-sm-3">
-    <div class="card">
+    <div class="card border-primary">
 	  <div class="card-header">
 	    INGRESO A METAES
 	  </div>
@@ -24,7 +24,7 @@
         <p class="card-text">Registros de actividades y eventos. Notas de avance, seguimiento y reportes de resultados.</p>
 	    <form role="form" autocomplete="on" class="form" method="post" action="/metaes/login">
 	        <div class="form-group">
-	          <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ingresar" type="submit">
+	          <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ingresar" type="submit">
 	        </div>
 	    </form>
       </div>
@@ -32,7 +32,7 @@
   </div>
   
   <div class="col-sm-3">
-    <div class="card">
+    <div class="card border-primary">
       <div class="card-header">
         INFORMACION AME
       </div>
@@ -41,7 +41,7 @@
         <p class="card-text">Acompañamiento, asistencia y ayuda a la mujer embarazada en situacion de riesgo.</p>
         <form role="form" autocomplete="on" class="form" method="post" action="/metaes">
             <div class="form-group">
-              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver Más" type="submit">
+              <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ver Más" type="submit">
             </div>
         </form>
       </div>
@@ -49,7 +49,7 @@
   </div>
  
    <div class="col-sm-3">
-    <div class="card">
+    <div class="card border-primary">
       <div class="card-header">
         INFORMACION JOSUE
       </div>
@@ -58,7 +58,7 @@
         <p class="card-text">Informacion para contactarse con el programa de ayuda para la recuperacion de las adicciones.</p>
         <form role="form" autocomplete="on" class="form" method="post" action="/metaes">
             <div class="form-group">
-              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver Más" type="submit">
+              <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ver Más" type="submit">
             </div>
         </form>
       </div>
@@ -66,7 +66,7 @@
   </div>
  
    <div class="col-sm-3">
-    <div class="card">
+    <div class="card border-primary">
       <div class="card-header">
         CATEDRAL DE LA FE
       </div>
@@ -75,7 +75,7 @@
         <p class="card-text">Informacion de nuestras reuniones y eventos en catedral de la fe, sede central y extensiones</p>
         <form role="form" autocomplete="on" class="form" method="post" action="/metaes">
             <div class="form-group">
-              <a href="http://catedraldelafe.org/" target="blank" class="btn btn-secondary btn-block">Ir al Sitio</a>
+              <a href="http://catedraldelafe.org/" target="blank" class="btn btn-outline-primary btn-block">Ir al Sitio</a>
             </div>
         </form>
       </div>
@@ -89,16 +89,16 @@
 <div class="row">
 
    <div class="col-sm-3">
-    <div class="card">
+    <div class="card border-primary">
       <div class="card-header">
-        Prueba Controller
+        PRUEBA CONTROLLER
       </div>
       <div class="card-body">
         <h5 class="card-title">Datos desde un Controller</h5>
         <p class="card-text">Obtener datos desde el backend controller.</p>
         <form role="form" autocomplete="on" class="form" method="post" action="/metaes/EmployeeController/getAllEmployees">
             <div class="form-group">
-              <input name="metaes-submit" class="btn btn-secondary btn-block" value="Ver Datos" type="submit">
+              <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ver Datos" type="submit">
             </div>
         </form>
       </div>
