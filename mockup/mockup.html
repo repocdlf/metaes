@@ -7,32 +7,39 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container-fluid">
-    <div id="menu" class="row border">
-    	<div class="col-sm">
-    		<button id="btn-consolicaciones" type="button" class="btn btn-primary btn-sm" onclick="mostrarConsolidaciones()">CONSOLIDACIONES</button>
-    	</div>
-    	<div class="col-sm">
-    		<button id="btn-celulas" type="button" class="btn btn-primary btn-sm" onclick="mostrarCelulas()">CELULAS</button>
-    	</div>
-    	<div class="col-sm">
-    		<button id="btn-encuentros" type="button" class="btn btn-primary btn-sm" onclick="mostrarEncuentros()">ENCUENTROS</button>
-    	</div>
-    	<div class="col-sm">
-    		<button id="btn-bautismos" type="button" class="btn btn-primary btn-sm" onclick="mostrarBautismos()">BAUTISMOS</button>
-    	</div>
-    	<div class="col-sm">
-    		<button id="btn-kids" type="button" class="btn btn-primary btn-sm" onclick="mostrarKids()">KIDS</button>
-    	</div>
-    	<div class="col-sm">
-    		<button id="btn-reportes" type="button" class="btn btn-primary btn-sm" onclick="mostrarReportes()">REPORTES</button>
-    	</div>
-    	<div class="col-sm">
-    		<button id="btn-reportes" type="button" class="btn btn-primary btn-sm" onclick="mostrarOtros()">OTROS</button>
-    	</div>
+    <!--Login page-->
+    <div id="login-form" class="container login-form">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Usuario</label>
+            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese usuario">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingrese contraseña">
+        </div>
+
+        <button type="submit" onclick="mostrarIndex()" class="btn btn-primary">Ingresar</button>
     </div>
+    <!--Menu-->
+    <div id="menu-barra" class="container-fluid">
+        <div id="menu" class="row border">
+            <div class="col-sm">
+                <button id="btn-consolicaciones" type="button" class="btn btn-primary btn-sm" onclick="mostrarConsolidaciones()">CONSOLIDACIONES</button>
+                <button id="btn-celulas" type="button" class="btn btn-primary btn-sm" onclick="mostrarCelulas()">CELULAS</button>
+                <button id="btn-encuentros" type="button" class="btn btn-primary btn-sm" onclick="mostrarEncuentros()">ENCUENTROS</button>
+                <button id="btn-bautismos" type="button" class="btn btn-primary btn-sm" onclick="mostrarBautismos()">BAUTISMOS</button>
+                <button id="btn-kids" type="button" class="btn btn-primary btn-sm" onclick="mostrarKids()">KIDS</button>
+                <button id="btn-reportes" type="button" class="btn btn-primary btn-sm" onclick="mostrarReportes()">REPORTES</button>
+                <button id="btn-reportes" type="button" class="btn btn-primary btn-sm" onclick="mostrarOtros()">OTROS</button>
+            </div>
+            <div class="col-sm button-logout">
+                <button id="btn-reportes" type="button" class="btn btn-danger btn-sm" onclick="mostrarLogin()">SALIR</button>
+            </div>
+        </div>
+    <!--Contenido-->
     <div id="celulas" class="row border" style="display: none">
         <div class="col-sm-4 border">
             <div class="card">
@@ -640,140 +647,6 @@
         </div>
     </div>
 </div>
-<script>
-    function myFunction(iID,tID) {
-      var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById(iID);
-      filter = input.value.toUpperCase();
-      table = document.getElementById(tID);
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }       
-      }
-    }
-    function mostrarAvances(idR){
-	    var i;
-	    for (i = 1; i < 9; i++) {
-		    var avance = "avances-r"+i;
-		    if (avance == idR){
-			    document.getElementById(avance).style.display = null;
-		    } else {
-			    document.getElementById(avance).style.display = "none";
-		    }
-	    }
-	    ocultarInformes();
-    }
-    function mostrarInformes(idA){
-	    var i;
-	    for (i = 1; i < 9; i++) {
-		    var informe = "informes-a"+i;
-		    if (informe == idA){
-			    document.getElementById(informe).style.display = null;
-		    } else {
-			    document.getElementById(informe).style.display = "none";
-		    }
-	    }
-    }
-    function ocultarInformes(){
-	    var i;
-	    for (i = 1; i < 9; i++) {
-		    var informe = "informes-a"+i;
-		    document.getElementById(informe).style.display = "none";
-	    }
-    }
-
-    function agregarInforme() {
-      var informe = prompt("Por favor agregar un nuevo informe", "");
-      if (informe != null) {
-	    var table = document.getElementById("myTable-i");
-      var row = table.insertRow(0);
-      var cell = row.insertCell(0);
-      cell.innerHTML = informe;
-      }
-    }
-
-    function mostrarConsolidaciones(){
-	    document.getElementById("consolicaciones").style.display = null;
-	    document.getElementById("celulas").style.display = "none";
-	    document.getElementById("celula-erik").style.display = "none";
-	    document.getElementById("celula-leandro").style.display = "none";
-	    document.getElementById("encuentros").style.display = "none";
-        document.getElementById("bautismos").style.display = "none";
-        document.getElementById("reportes").style.display = "none";
-    }
-
-    function mostrarCelulas(){
-        document.getElementById("consolicaciones").style.display = "none";
-        document.getElementById("celulas").style.display = null;
-        document.getElementById("celula-erik").style.display = "none";
-	    document.getElementById("celula-leandro").style.display = "none";
-        document.getElementById("encuentros").style.display = "none";
-        document.getElementById("bautismos").style.display = "none";
-        document.getElementById("reportes").style.display = "none";
-    }
-
-    function mostrarEncuentros() {
-        document.getElementById("consolicaciones").style.display = "none";
-        document.getElementById("celulas").style.display = "none";
-        document.getElementById("celula-erik").style.display = "none";
-	    document.getElementById("celula-leandro").style.display = "none";
-        document.getElementById("encuentros").style.display = null;
-        document.getElementById("bautismos").style.display = "none";
-        document.getElementById("reportes").style.display = "none";
-    }
-
-    function mostrarBautismos() {
-        document.getElementById("consolicaciones").style.display = "none";
-        document.getElementById("celulas").style.display = "none";
-        document.getElementById("celula-erik").style.display = "none";
-	    document.getElementById("celula-leandro").style.display = "none";
-        document.getElementById("encuentros").style.display = "none";
-        document.getElementById("bautismos").style.display = null;
-        document.getElementById("reportes").style.display = "none";
-    }
-
-    function mostrarReportes() {
-        document.getElementById("consolicaciones").style.display = "none";
-        document.getElementById("celulas").style.display = "none";
-        document.getElementById("celula-erik").style.display = "none";
-	    document.getElementById("celula-leandro").style.display = "none";
-        document.getElementById("encuentros").style.display = "none";
-        document.getElementById("bautismos").style.display = "none";
-        document.getElementById("reportes").style.display = null;
-    }
-    
-    function mostrarCelulaErik(divIdCelula){
-	    document.getElementById("celula-leandro").style.display = "none";
-    	document.getElementById(divIdCelula).style.display = null;
-    }
-    
-    function mostrarCelulaLeandro(divIdCelula){
-	    document.getElementById("celula-erik").style.display = null;
-    	document.getElementById(divIdCelula).style.display = null;
-    }
-    
-    function ocultarCelulasN3(){
-    	document.getElementById("celula-erik").style.display = "none";
-    	document.getElementById("celula-leandro").style.display = "none";
-    }
-    function ocultarCelulasN4(){
-    	//document.getElementById("celula-erik").style.display = "none";
-    	document.getElementById("celula-leandro").style.display = "none";
-    }
-    function mostrarKids(){
-    	
-    }
-    function mostrarOtros(){
-    	
-    }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
