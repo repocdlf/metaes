@@ -34,7 +34,7 @@
 
 <body>
 <div class="login-form">
-    <form action="/metaes/EmployeeController/getAllEmployees" method="post">
+    <form action="/metaes/LoginController/doLogin" method="post">
         <h2 class="text-center">Ingreso</h2>       
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Usuario">
@@ -47,7 +47,7 @@
         </div>
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox">Recordarme</label>
-            <a href="/metaes/PasswordController/getPasswordRecoveryDisplay" class="pull-right">¿Olvidaste tu Clave?</a>
+            <a href="/metaes/LoginController/getRecoveryPass" class="pull-right">¿Olvidaste tu Clave?</a>
         </div>        
     </form>
     <p class="text-center"><a href="/metaes">Volver al Inicio</a></p>

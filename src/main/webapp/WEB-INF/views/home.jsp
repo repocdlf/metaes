@@ -22,9 +22,9 @@
       <div class="card-body">
         <h5 class="card-title">Ingreso a Metaes</h5>
         <p class="card-text">Registros de actividades y eventos. Notas de avance, seguimiento y reportes de resultados.</p>
-	    <form role="form" autocomplete="on" class="form" method="post" action="/metaes/login">
+	    <form role="form" autocomplete="on" class="form" method="get" action="/metaes/LoginController/getLogin">
 	        <div class="form-group">
-	          <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ingresar" type="submit">
+	          <input class="btn btn-outline-primary btn-block" value="Ingresar" type="submit">
 	        </div>
 	    </form>
       </div>

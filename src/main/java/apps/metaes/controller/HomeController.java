@@ -28,11 +28,4 @@ public class HomeController
 		return "home";
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String getLoginPage(Model model)
-	{
-		//model.addAttribute("employees", manager.getAllEmployees());
-		return "login";
-	}
-
 }
