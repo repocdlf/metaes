@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import apps.metaes.service.EmployeeManager;
 
@@ -23,10 +24,10 @@ public class LoginController
 	}
 	
 	@RequestMapping(value = "/doLogin", method = RequestMethod.POST)
-	public String doLogin(Model model)
+	public ModelAndView doLogin(Model model)
 	{
-		//model.addAttribute("employees", manager.getAllEmployees());
-		return "consolidaciones";
+		//valida credenciales y redirecciona
+		return new ModelAndView("forward:/ConsolidacionController/getConsolidaciones");
 	}
 	
 	@RequestMapping(value = "/getRecoveryPass", method = RequestMethod.GET)
