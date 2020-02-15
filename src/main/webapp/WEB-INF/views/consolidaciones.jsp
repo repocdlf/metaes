@@ -9,21 +9,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+<jsp:include page="../include/common/header.jsp"/>
 <div class="container-fluid">
-
-<div id="menu" class="row">
-    <div class="col-sm">
-        <button id="btn-consolicaciones" type="button" class="btn btn-primary btn-sm" onclick="mostrarConsolidaciones()">CONSOLIDACIONES</button>
-        <button id="btn-celulas" type="button" class="btn btn-primary btn-sm" onclick="mostrarCelulas()">CELULAS</button>
-        <button id="btn-encuentros" type="button" class="btn btn-primary btn-sm" onclick="mostrarEncuentros()">ENCUENTROS</button>
-        <button id="btn-bautismos" type="button" class="btn btn-primary btn-sm" onclick="mostrarBautismos()">BAUTISMOS</button>
-        <button id="btn-kids" type="button" class="btn btn-primary btn-sm" onclick="mostrarKids()">KIDS</button>
-        <button id="btn-reportes" type="button" class="btn btn-primary btn-sm" onclick="mostrarReportes()">REPORTES</button>
-        <button id="btn-reportes" type="button" class="btn btn-primary btn-sm" onclick="mostrarOtros()">OTROS</button>
-    </div>
-</div>
-
-    <!--Contenido-->
     <div id="celulas" class="row border" style="display: none">
         <div class="col-sm-4 border">
             <div class="card">
@@ -791,5 +778,6 @@ function myFunction(iID,tID) {
 
   init();
 </script>
+<jsp:include page="../include/common/footer.jsp"/>
 </body>
 </html>

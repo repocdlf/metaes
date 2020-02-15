@@ -27,7 +27,7 @@ public class LoginController
 	public ModelAndView doLogin(Model model)
 	{
 		//valida credenciales y redirecciona
-		return new ModelAndView("forward:/ConsolidacionController/getConsolidaciones");
+		return new ModelAndView("redirect:/ConsolidacionController/getConsolidaciones");
 	}
 	
 	@RequestMapping(value = "/getRecoveryPass", method = RequestMethod.GET)

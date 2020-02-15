@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import apps.metaes.service.EmployeeManager;
 
 @Controller
-@RequestMapping(value = "/ConsolidacionController", method = RequestMethod.POST)
-public class ConsolidacionController {
+@RequestMapping(value = "/KidsController", method = RequestMethod.POST)
+public class KidsController {
 	@Autowired
 	EmployeeManager manager;
 
-	@RequestMapping(value = "/getConsolidaciones", method = RequestMethod.GET)
+	@RequestMapping(value = "/getKids", method = RequestMethod.GET)
 	public String getPasswordRecoveryDisplay(Model model) {
-		return "consolidaciones";
+		return "kids";
 	}
 
 }
