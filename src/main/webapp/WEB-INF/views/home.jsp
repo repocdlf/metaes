@@ -20,12 +20,10 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Ingreso a Metaes</h5>
-                    <p class="card-text">Registros de actividades y eventos. Notas de avance, seguimiento y reportes de
-                        resultados.</p>
-                    <form role="form" autocomplete="on" class="form" method="get"
-                          action="/metaes/LoginController/getLogin">
+                    <p class="card-text">Registros de actividades y eventos. Notas de avance, seguimiento y reportes de resultados.</p>
+                    <form role="form" autocomplete="on" class="form" method="get" action="/metaes/LoginController/getLogin">
                         <div class="form-group">
-                            <input class="btn btn-outline-primary btn-block" value="Ingresar" type="submit">
+                            <input class="btn btn-outline-primary btn-block" onclick="window.location.href='/metaes/LoginController/getLogin'" value="Ingresar" type="button">
                         </div>
                     </form>
                 </div>
@@ -39,12 +37,10 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Ayuda a la Mujer</h5>
-                    <p class="card-text">Acompañamiento, asistencia y ayuda a la mujer embarazada en situacion de
-                        riesgo.</p>
+                    <p class="card-text">AcompaÃ±amiento, asistencia y ayuda a la mujer embarazada en situacion de riesgo.</p>
                     <form role="form" autocomplete="on" class="form" method="post" action="/metaes">
                         <div class="form-group">
-                            <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ver Más"
-                                   type="submit">
+                            <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ver Mas" type="submit">
                         </div>
                     </form>
                 </div>
@@ -58,12 +54,10 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Recuperacion de Adicciones</h5>
-                    <p class="card-text">Informacion para contactarse con el programa de ayuda para la recuperacion de
-                        las adicciones.</p>
+                    <p class="card-text">Informacion para contactarse con el programa de ayuda para la recuperacion de las adicciones.</p>
                     <form role="form" autocomplete="on" class="form" method="post" action="/metaes">
                         <div class="form-group">
-                            <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ver Más"
-                                   type="submit">
+                            <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ver Mas" type="submit">
                         </div>
                     </form>
                 </div>
@@ -77,12 +71,10 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Informacion General</h5>
-                    <p class="card-text">Informacion de nuestras reuniones y eventos en catedral de la fe, sede central
-                        y extensiones</p>
+                    <p class="card-text">Informacion de nuestras reuniones y eventos en catedral de la fe, sede central y extensiones</p>
                     <form role="form" autocomplete="on" class="form" method="post" action="/metaes">
                         <div class="form-group">
-                            <a href="http://catedraldelafe.org/" target="blank"
-                               class="btn btn-outline-primary btn-block">Ir al Sitio</a>
+                            <a href="http://catedraldelafe.org/" target="blank" class="btn btn-outline-primary btn-block">Ir al Sitio</a>
                         </div>
                     </form>
                 </div>
