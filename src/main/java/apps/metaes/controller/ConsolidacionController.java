@@ -6,16 +6,37 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import apps.metaes.service.EmployeeManager;
+import apps.metaes.service.ConsolidacionManager;
 
 @Controller
 @RequestMapping(value = "/ConsolidacionController", method = RequestMethod.POST)
 public class ConsolidacionController {
 	@Autowired
-	EmployeeManager manager;
+	ConsolidacionManager manager;
 
 	@RequestMapping(value = "/getConsolidaciones", method = RequestMethod.GET)
-	public String getPasswordRecoveryDisplay(Model model) {
+	public String getConsolidaciones(Model model) {
+		Integer idPadronUsuario = 1;
+		model.addAttribute("consolidaciones", manager.getConsolidaciones(idPadronUsuario));
+		model.addAttribute("avances", manager.getAvances(1));
+		model.addAttribute("informes", manager.getInformes(1, 1));
+		return "consolidaciones";
+	}
+	
+	@RequestMapping(value = "/getAvances", method = RequestMethod.POST)
+	public String getAvances(Model model, Integer idConsolidacion) {
+		Integer idPadronUsuario = 1;
+		model.addAttribute("consolidaciones", manager.getConsolidaciones(idPadronUsuario));
+		model.addAttribute("avances", manager.getAvances(idConsolidacion));
+		return "consolidaciones";
+	}
+	
+	@RequestMapping(value = "/getInformes", method = RequestMethod.POST)
+	public String getInformes(Model model, Integer idConsolidacion, Integer idAvance) {
+		Integer idPadronUsuario = 1;
+		model.addAttribute("consolidaciones", manager.getConsolidaciones(idPadronUsuario));
+		model.addAttribute("avances", manager.getAvances(idConsolidacion));
+		model.addAttribute("informes", manager.getInformes(idConsolidacion, idAvance));
 		return "consolidaciones";
 	}
 
