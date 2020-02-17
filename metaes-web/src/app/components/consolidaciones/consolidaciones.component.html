@@ -30,7 +30,7 @@
                 <div class="card-header">CONCURRENTES</div>
             </div>
             <div class="input-group input-group-sm mb-3">
-                <input id="input-concurrentes" onkeyup="myFunction('input-concurrentes','tabla-concurrentes')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <input id="input-concurrentes" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
             <table id="tabla-concurrentes" class="table table-hover">
@@ -55,7 +55,7 @@
                 <div class="card-header">OBSERVACIONES</div>
             </div>
             <div class="input-group input-group-sm mb-3">
-                <input id="input-observaciones" onkeyup="myFunction('input-observaciones','table-observaciones')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <input id="input-observaciones" placeholder="Buscar por nombres..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
             <table id="tabla-observaciones" class="table table-hover">
@@ -93,7 +93,7 @@
                 <div class="card-header">CONCURRENTES</div>
             </div>
             <div class="input-group input-group-sm mb-3">
-                <input id="input-concurrentes-erik" onkeyup="myFunction('input-concurrentes-erik','tabla-concurrentes-erik')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <input id="input-concurrentes-erik"placeholder="Buscar por nombres..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
             <table id="tabla-concurrentes-erik" class="table table-hover">
@@ -122,7 +122,7 @@
                 <div class="card-header">OBSERVACIONES</div>
             </div>
             <div class="input-group input-group-sm mb-3">
-                <input id="input-observaciones-erik" onkeyup="myFunction('input-observaciones-erik','table-observaciones-erik')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <input id="input-observaciones-erik" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
             <table id="tabla-observaciones-erik" class="table table-hover">
@@ -160,7 +160,7 @@
                 <div class="card-header">CONCURRENTES</div>
             </div>
             <div class="input-group input-group-sm mb-3">
-                <input id="input-concurrentes-leandro" onkeyup="myFunction('input-concurrentes-leandro','tabla-concurrentes-leandro')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <input id="input-concurrentes-leandro" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
             <table id="tabla-concurrentes-leandro" class="table table-hover">
@@ -189,7 +189,7 @@
                 <div class="card-header">OBSERVACIONES</div>
             </div>
             <div class="input-group input-group-sm mb-3">
-                <input id="input-observaciones-leandro" onkeyup="myFunction('input-observaciones-leandro','table-observaciones-leandro')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <input id="input-observaciones-leandro" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
             <table id="tabla-observaciones-leandro" class="table table-hover">
@@ -217,12 +217,12 @@
                 <div class="card-header">DATOS</div>
             </div>
             <div class="input-group input-group-sm mb-3">
-                <input id="input-contacto" onkeyup="myFunction('input-contacto','myTable-c')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <input id="input-contacto" type="text" class="form-control" [(ngModel)]="searchName" placeholder="Buscar por nombres..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
             <table id="myTable-c" class="table table-hover">
                 <tbody>
-                    <tr *ngFor="let person of people">
+                    <tr *ngFor="let person of people | filter:searchName">
                         <td>{{ person.first_name + " " + person.last_name}}</td>
                         <td>{{ person.phone }}</td>
                     </tr>
@@ -233,10 +233,8 @@
             <div class="card">
                 <div class="card-header">AVANCES</div>
             </div>
-            <!--input type="text" id="myInput-avances" onkeyup="myFunction('myInput-avances','myTable-a')" placeholder="Buscar por avance.." title="Type in a name"-->
             <div class="input-group input-group-sm mb-3">
-
-                <input id="myInput-avances" onkeyup="myFunction('myInput-avances','myTable-a')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por avance..">
+                <input id="myInput-avances" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por avance..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
 
@@ -416,9 +414,8 @@
             <div class="card">
                 <div class="card-header">INFORMES</div>
             </div>
-            <!--input type="text" id="myInput-informes" onkeyup="myFunction('myInput-informes','myTable-i')" placeholder="Buscar por texto.." title="Type in a name"-->
             <div class="input-group input-group-sm mb-3">
-                <input id="myInput-informes" onkeyup="myFunction('myInput-informes','myTable-i')" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por texto..">
+                <input id="myInput-informes"  type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por texto..">
                 <button type="button" class="btn btn-outline-primary btn-sm" onclick="agregarInforme()">+</button>
             </div>
 

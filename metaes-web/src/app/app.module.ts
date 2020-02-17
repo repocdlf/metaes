@@ -8,20 +8,22 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ConsolidacionesComponent } from './components/consolidaciones/consolidaciones.component';
 import { ConsolidacionesService } from './services/consolidaciones.service';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     DashboardComponent,
-    ConsolidacionesComponent
+    ConsolidacionesComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ConsolidacionesService],
   bootstrap: [AppComponent]

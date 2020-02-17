@@ -8,7 +8,8 @@ import { ConsolidacionesService } from 'src/app/services/consolidaciones.service
   styleUrls: ['./consolidaciones.component.css']
 })
 export class ConsolidacionesComponent implements OnInit {
-  public people = [];
+  people = [];
+  searchName:string;
 
   constructor(private consolidacionesService : ConsolidacionesService) { }
 
