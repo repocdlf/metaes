@@ -1,0 +1,19 @@
+<div class="login-form">
+    <!-- Todo implement login :) -->
+    <form action="/consolidaciones" >
+        <h2 class="text-center">Ingreso</h2>       
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Usuario">
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Clave">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+        </div>
+        <div class="clearfix">
+            <label class="pull-left checkbox-inline"><input type="checkbox">Recordarme</label>
+            <a routerLink="/recoveryPass" class="pull-right">¿Olvidaste tu Clave?</a>
+        </div>        
+    </form>
+    <p class="text-center"><a routerLink="/">Volver al Inicio</a></p>
