@@ -1,0 +1,570 @@
+<div class="container-fluid">
+    <div id="celulas" class="row border" style="display: none">
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">CELULA DE JUAN</div>
+            </div>
+            <form>
+                <div class="form-group row">
+                    <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="nombre" value="Juan Perez">
+                    </div>
+                    <label for="direccion" class="col-sm-2 col-form-label">Direccion:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="direccion" value="Av. Eva Perón 1040, Buenos Aires">
+                    </div>
+                    <label for="nivel" class="col-sm-2 col-form-label">Nivel:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="nivel" value="2">
+                    </div>
+                    <label for="lider" class="col-sm-2 col-form-label">Lider:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="lider" value="Mateo Rodriguez">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">CONCURRENTES</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="input-concurrentes" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+            </div>
+            <table id="tabla-concurrentes" class="table table-hover">
+                <tbody>
+                    <tr onclick="ocultarCelulasN3()">
+                        <td>Roberto Pereyra</td>
+                        <td>15-1234-1991</td>
+                    </tr>
+                    <tr onclick="mostrarCelulaErik('celula-erik')">
+                        <td>Erik Rios</td>
+                        <td>15-1234-1992</td>
+                    </tr>
+                    <tr onclick="ocultarCelulasN3()">
+                        <td>Matías Zaracho</td>
+                        <td>15-1234-1998</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">OBSERVACIONES</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="input-observaciones" placeholder="Buscar por nombres..">
+                <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+            </div>
+            <table id="tabla-observaciones" class="table table-hover">
+            </table>
+        </div>
+    </div>
+    <div id="celula-erik" class="row border" style="display: none">
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">CELULA DE ERIK</div>
+            </div>
+            <form>
+                <div class="form-group row">
+                    <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="nombre" value="Erik Rios">
+                    </div>
+                    <label for="direccion" class="col-sm-2 col-form-label">Direccion:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="direccion" value="Av. San Juan 2020, Buenos Aires">
+                    </div>
+                    <label for="nivel" class="col-sm-2 col-form-label">Nivel:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="nivel" value="3">
+                    </div>
+                    <label for="lider" class="col-sm-2 col-form-label">Lider:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="lider" value="Juan Perez">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">CONCURRENTES</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="input-concurrentes-erik"placeholder="Buscar por nombres..">
+                <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+            </div>
+            <table id="tabla-concurrentes-erik" class="table table-hover">
+                <tbody>
+                    <tr onclick="ocultarCelulasN4()">
+                        <td>Juan Manuel Vivaldi</td>
+                        <td>15-1234-1991</td>
+                    </tr>
+                    <tr onclick="ocultarCelulasN4()">
+                        <td>Tomás Santiago</td>
+                        <td>15-1234-1992</td>
+                    </tr>
+                    <tr onclick="ocultarCelulasN4()">
+                        <td>Pedro Ibarra</td>
+                        <td>15-1234-1998</td>
+                    </tr>
+                    <tr onclick="mostrarCelulaLeandro('celula-leandro')">
+                        <td>Leandro Tolini</td>
+                        <td>15-1234-1998</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">OBSERVACIONES</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="input-observaciones-erik" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+            </div>
+            <table id="tabla-observaciones-erik" class="table table-hover">
+            </table>
+        </div>
+    </div>
+    <div id="celula-leandro" class="row border" style="display: none">
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">CELULA DE LEANDRO</div>
+            </div>
+            <form>
+                <div class="form-group row">
+                    <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="nombre" value="Leandro Tolini">
+                    </div>
+                    <label for="direccion" class="col-sm-2 col-form-label">Direccion:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="direccion" value="Av. Mitre 1235, Buenos Aires">
+                    </div>
+                    <label for="nivel" class="col-sm-2 col-form-label">Nivel:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="nivel" value="4">
+                    </div>
+                    <label for="lider" class="col-sm-2 col-form-label">Lider:</label>
+                    <div class="col-sm-10">
+                        <input type="text" readonly class="form-control-plaintext" id="lider" value="Erik Rios">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">CONCURRENTES</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="input-concurrentes-leandro" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+            </div>
+            <table id="tabla-concurrentes-leandro" class="table table-hover">
+                <tbody>
+                    <tr onclick="mostrarObservaciones('observaciones-r1')">
+                        <td>Juan Martín López</td>
+                        <td>15-1234-1991</td>
+                    </tr>
+                    <tr onclick="mostrarObservaciones('observaciones-r2')">
+                        <td>Matías Rey</td>
+                        <td>15-1234-1992</td>
+                    </tr>
+                    <tr onclick="mostrarObservaciones('observaciones-r3')">
+                        <td>Nicolás Cicileo</td>
+                        <td>15-1234-1998</td>
+                    </tr>
+                    <tr onclick="mostrarObservaciones('observaciones-r4')">
+                        <td>Santiago Tarazona</td>
+                        <td>15-1234-1998</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">OBSERVACIONES</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="input-observaciones-leandro" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por nombres..">
+                <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+            </div>
+            <table id="tabla-observaciones-leandro" class="table table-hover">
+            </table>
+        </div>
+    </div>
+    <div id="encuentros" class="row border" style="display: none">
+        <div class="col-sm">
+            no incluye datos de encuentros en esta etapa
+        </div>
+    </div>
+    <div id="bautismos" class="row border" style="display: none">
+        <div class="col-sm">
+            no incluye datos de bautismos en esta etapa
+        </div>
+    </div>
+    <div id="reportes" class="row border" style="display: none">
+        <div class="col-sm">
+            no incluye reportes en esta etapa
+        </div>
+    </div>
+    <div id="consolicaciones" class="row border">
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">DATOS</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="input-contacto" type="text" class="form-control" [(ngModel)]="searchName" placeholder="Buscar por nombres..">
+                <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+            </div>
+            <table id="myTable-c" class="table table-hover">
+                <tbody>
+                    <tr *ngFor="let person of people | filter:searchName">
+                        <td>{{ person.first_name + " " + person.last_name}}</td>
+                        <td>{{ person.phone }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">AVANCES</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="myInput-avances" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por avance..">
+                <button type="button" class="btn btn-outline-primary btn-sm">+</button>
+            </div>
+
+            <div id="avances-r1" style="display: none">
+                <table id="myTable-a" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>AVANCES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr onclick="mostrarInformes('informes-a1')">
+                            <td>Contactado</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a2')">
+                            <td>En Celula</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a3')">
+                            <td>En Culto</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a4')">
+                            <td>Inicio EV</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a5')">
+                            <td>Bautizado</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a6')">
+                            <td>Finaliza EV</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a8')">
+                            <td>Visitado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="avances-r2" style="display: none">
+                <table id="myTable-a" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>AVANCES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr onclick="mostrarInformes('informes-a1')">
+                            <td>Contactado</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a2')">
+                            <td>En Celula</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a3')">
+                            <td>En Culto</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a4')">
+                            <td>Inicio EV</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a5')">
+                            <td>Bautizado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="avances-r3" style="display: none">
+                <table id="myTable-a" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>AVANCES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr onclick="mostrarInformes('informes-a2')">
+                            <td>En Celula</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a3')">
+                            <td>En Culto</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a5')">
+                            <td>Bautizado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="avances-r4" style="display: none">
+                <table id="myTable-a" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>AVANCES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr onclick="mostrarInformes('informes-a3')">
+                            <td>En Culto</td>
+                        </tr>
+                        <tr onclick="mostrarInformes('informes-a5')">
+                            <td>Bautizado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="avances-r5" style="display: none">
+                <table id="myTable-a" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>AVANCES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr onclick="mostrarInformes('informes-a3')">
+                            <td>En Culto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="avances-r6" style="display: none">
+                <table id="myTable-a" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>AVANCES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr onclick="mostrarInformes('informes-a1')">
+                            <td>Contactado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="avances-r7" style="display: none">
+                <table id="myTable-a" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>AVANCES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div id="avances-r8" style="display: none">
+                <table id="myTable-a" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>AVANCES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr onclick="mostrarInformes('informes-a7')">
+                            <td>Dato Erroneo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="col-sm-4 border">
+            <div class="card">
+                <div class="card-header">INFORMES</div>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <input id="myInput-informes"  type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por texto..">
+                <button type="button" class="btn btn-outline-primary btn-sm" onclick="agregarInforme()">+</button>
+            </div>
+
+            <div id="informes-a1" style="display: none">
+                <table id="myTable-i" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>INFORMES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr>
+                            <td>Hablamos nuevamente y estamos viendo los horarios disponibles para que se integre a una celula</td>
+                        </tr>
+                        <tr>
+                            <td>Lo llame para invitarlo nuevamente al culto, quedamos en econtrarnos en catedral</td>
+                        </tr>
+                        <tr>
+                            <td>Realice el primer llamado, conversamos un tiempo sobre como se sitio en la reunion, esta muy contento</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="informes-a2" style="display: none">
+                <table id="myTable-i" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>INFORMES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr>
+                            <td>Hoy comenzo a asistir a una celula, oramos por el y tuvimos un tiempo en donde nos estamos conociendo mas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="informes-a3" style="display: none">
+                <table id="myTable-i" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>INFORMES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr>
+                            <td>Viene regularmente al culto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="informes-a4" style="display: none">
+                <table id="myTable-i" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>INFORMES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr>
+                            <td>Esta semana comenzo la excuela de vida en la mañana</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="informes-a5" style="display: none">
+                <table id="myTable-i" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>INFORMES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr>
+                            <td>Se bautizo el primer miercoles de este mes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="informes-a6" style="display: none">
+                <table id="myTable-i" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>INFORMES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr>
+                            <td>Finalizo el cuarto modulo de la escuela de vida, participara en la siguiente graduacion</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="informes-a7" style="display: none">
+                <table id="myTable-i" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>INFORMES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr>
+                            <td>Intente contactarlo pero al parecer el numero de telefono fue dado de baja y no ha dejado otro medio de contacto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="informes-a8" style="display: none">
+                <table id="myTable-i" class="table table-hover">
+                    <!--
+                <thead>
+                    <tr class="header">
+                        <th>INFORMES</th>
+                    </tr>
+                </thead>
+                -->
+                    <tbody>
+                        <tr>
+                            <td>Hoy visitamos su casa y compartimos la palabra de Dios alli con su familia</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+
+</script>

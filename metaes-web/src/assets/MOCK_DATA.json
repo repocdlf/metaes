@@ -1,0 +1,71 @@
+[{
+  "id": 1,
+  "first_name": "Tersina",
+  "last_name": "Tschirasche",
+  "email": "ttschirasche0@delicious.com",
+  "gender": "Female",
+  "phone": "(231) 2070110"
+}, {
+  "id": 2,
+  "first_name": "Lexie",
+  "last_name": "Heditch",
+  "email": "lheditch1@wsj.com",
+  "gender": "Female",
+  "phone": "(829) 5057814"
+}, {
+  "id": 3,
+  "first_name": "Ida",
+  "last_name": "Antognazzi",
+  "email": "iantognazzi2@netlog.com",
+  "gender": "Female",
+  "phone": "(598) 4428095"
+}, {
+  "id": 4,
+  "first_name": "Durward",
+  "last_name": "Gladwish",
+  "email": "dgladwish3@washingtonpost.com",
+  "gender": "Male",
+  "phone": "(746) 5508263"
+}, {
+  "id": 5,
+  "first_name": "Jo",
+  "last_name": "Kristof",
+  "email": "jkristof4@google.pl",
+  "gender": "Male",
+  "phone": "(463) 1253215"
+}, {
+  "id": 6,
+  "first_name": "Conchita",
+  "last_name": "Gioan",
+  "email": "cgioan5@skyrock.com",
+  "gender": "Female",
+  "phone": "(375) 8376324"
+}, {
+  "id": 7,
+  "first_name": "Willard",
+  "last_name": "Aronoff",
+  "email": "waronoff6@accuweather.com",
+  "gender": "Male",
+  "phone": "(563) 6096444"
+}, {
+  "id": 8,
+  "first_name": "Cad",
+  "last_name": "Darington",
+  "email": "cdarington7@ucsd.edu",
+  "gender": "Male",
+  "phone": "(389) 3513481"
+}, {
+  "id": 9,
+  "first_name": "Ulberto",
+  "last_name": "Skynner",
+  "email": "uskynner8@indiegogo.com",
+  "gender": "Male",
+  "phone": "(371) 8289650"
+}, {
+  "id": 10,
+  "first_name": "Candida",
+  "last_name": "Ference",
+  "email": "cference9@amazonaws.com",
+  "gender": "Female",
+  "phone": "(263) 6363604"
+}]
