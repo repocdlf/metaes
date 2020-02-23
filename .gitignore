@@ -23,3 +23,5 @@
 hs_err_pid*
 /target/
 /bin/
+apache-tomcat-7.0.99
+.idea
