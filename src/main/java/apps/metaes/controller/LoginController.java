@@ -38,10 +38,10 @@ public class LoginController
 	}
 	
 	@RequestMapping(value = "/doRecoveryPass", method = RequestMethod.POST)
-	public String doRecoveryPass(Model model)
+	public ModelAndView doRecoveryPass(Model model)
 	{
 		//model.addAttribute("employees", manager.getAllEmployees());
-		return "login";
+		return new ModelAndView("redirect:/LoginController/getLogin");
 	}
 
 }

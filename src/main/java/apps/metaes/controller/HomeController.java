@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import apps.metaes.service.EmployeeManager;
 
@@ -15,17 +16,17 @@ public class HomeController
 	EmployeeManager manager;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String getHomePage(Model model)
+	public ModelAndView getHomePage(Model model)
 	{
 		//model.addAttribute("employees", manager.getAllEmployees());
-		return "home";
+		return new ModelAndView("redirect:/LoginController/getLogin");
 	}
 
 	@RequestMapping(value = "/metaes", method = RequestMethod.GET)
-	public String getHomePageMetaes(Model model)
+	public ModelAndView getHomePageMetaes(Model model)
 	{
 		//model.addAttribute("employees", manager.getAllEmployees());
-		return "home";
+		return new ModelAndView("redirect:/LoginController/getLogin");
 	}
 	
 }

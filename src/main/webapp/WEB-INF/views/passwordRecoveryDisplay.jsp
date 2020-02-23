@@ -46,7 +46,7 @@
     </form>
     <form id="cancel-form" role="form" autocomplete="on" class="form" method="get" action="/metaes/LoginController/getLogin">
       <div class="form-group">
-        <input name="recover-submit" class="btn-block" value="Cancelar" type="submit">
+        <input name="recover-submit" class="btn-block" value="Cancelar" type="button" onclick="window.location.href='/metaes/LoginController/getLogin'">
       </div>
     </form>
 </div>

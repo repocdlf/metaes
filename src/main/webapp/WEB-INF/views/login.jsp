@@ -47,10 +47,9 @@
         </div>
         <div class="clearfix">
             <label class="pull-left checkbox-inline"><input type="checkbox">Recordarme</label>
-            <a href="/metaes/LoginController/getRecoveryPass" class="pull-right">Â¿Olvidaste tu Clave?</a>
+            <a href="/metaes/LoginController/getRecoveryPass" class="pull-right">¿Olvidaste tu Clave?</a>
         </div>        
     </form>
-    <p class="text-center"><a href="/metaes">Volver al Inicio</a></p>
 </div>
 </body>
 </html>                                                                 
