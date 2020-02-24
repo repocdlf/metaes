@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "status": ["En Celula", "Contactado", "Finaliza EV"]
+  },
+  {
+    "id": "2",
+    "status": ["En Celula", "Contactado"]
+  },
+  {
+    "id": "3",
+    "status": ["Contactado", "Finaliza EV"]
+  }
+]
