@@ -1,0 +1,34 @@
+[
+  {
+    "id": "0",
+    "name": "Dato Erroneo"
+  },
+  {
+    "id": "1",
+    "name": "Contactado"
+  },
+  {
+    "id": "2",
+    "name": "En Celula"
+  },
+  {
+    "id": "3",
+    "name": "Inicio EV"
+  },
+  {
+    "id": "4",
+    "name": "Bautizado"
+  },
+  {
+    "id": "5",
+    "name": "Finaliza EV"
+  },
+  {
+    "id": "6",
+    "name": "Visitado"
+  },
+  {
+    "id": "7",
+    "name": "Contactado"
+  }
+]

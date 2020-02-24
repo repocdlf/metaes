@@ -14,4 +14,8 @@ export class ConsolidacionesService {
     return this.http.get("http://localhost:4200/assets/MOCK_DATA.json");
   }
 
+  getListOfStates() : Observable<any>{
+    return this.http.get("http://localhost:4200/assets/MOCK_DATA_AVANCES.json");
+  }
+
 }

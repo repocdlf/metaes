@@ -237,6 +237,13 @@
                 <input id="myInput-avances" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Buscar por avance..">
                 <button type="button" class="btn btn-outline-primary btn-sm">+</button>
             </div>
+            <table id="myTable-c" class="table table-hover">
+                <tbody>
+                    <tr *ngFor="let st of status ">
+                        <td>{{ st.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
 
             <div id="avances-r1" style="display: none">
                 <table id="myTable-a" class="table table-hover">

@@ -9,12 +9,15 @@ import { ConsolidacionesService } from 'src/app/services/consolidaciones.service
 })
 export class ConsolidacionesComponent implements OnInit {
   people = [];
+  status = [];
+  actualStatus = [];
   searchName:string;
 
   constructor(private consolidacionesService : ConsolidacionesService) { }
 
   ngOnInit(): void {
     this.getPeople();
+    this.getStatus();
   }
 
   getPeople(): void{
@@ -30,5 +33,23 @@ export class ConsolidacionesComponent implements OnInit {
       }
     );
   }
+
+  getStatus(){
+    this.consolidacionesService.getListOfStates()
+    .subscribe( data=>{
+      for(let i = 0 ; i < data.length ; i++){
+        this.status.push(data[i]);
+      }
+    },
+    (error) => {
+      console.error(error);
+    }
+    )
+  }
+
+  getStatusPerson(number id){
+    
+  }
+
 
 }
