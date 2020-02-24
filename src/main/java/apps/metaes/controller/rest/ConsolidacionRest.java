@@ -29,7 +29,6 @@ public class ConsolidacionRest {
 
 	@GetMapping(value = "/getAvances")
 	public List<AvanceVO> getAvances(
-			@RequestParam(value = "idPadron", defaultValue = "0") Integer idPadron,
 			@RequestParam(value = "idConsolidacion", defaultValue = "0") Integer idConsolidacion
 			) {
 		return manager.getAvances(idConsolidacion);
@@ -37,7 +36,6 @@ public class ConsolidacionRest {
 
 	@GetMapping(value = "/getInformes")
 	public List<ObservacionVO> getInformes(
-			@RequestParam(value = "idPadron", defaultValue = "0") Integer idPadron,
 			@RequestParam(value = "idConsolidacion", defaultValue = "0") Integer idConsolidacion,
 			@RequestParam(value = "idAvance", defaultValue = "0") Integer idAvance
 			) {
