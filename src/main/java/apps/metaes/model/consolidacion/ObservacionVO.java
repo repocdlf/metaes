@@ -1,4 +1,4 @@
-package apps.metaes.model;
+package apps.metaes.model.consolidacion;
 
 import java.io.Serializable;
 

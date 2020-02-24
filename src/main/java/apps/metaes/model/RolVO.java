@@ -2,19 +2,19 @@ package apps.metaes.model;
 
 import java.io.Serializable;
 
-public class AvanceVO implements Serializable {
+public class RolVO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Integer idAvance;
+	private Integer idRol;
 	private String nombre;
 	private String descripcion;
 
-	public Integer getIdAvance() {
-		return idAvance;
+	public Integer getIdRol() {
+		return idRol;
 	}
 
-	public void setIdAvance(Integer idAvance) {
-		this.idAvance = idAvance;
+	public void setIdRol(Integer idRol) {
+		this.idRol = idRol;
 	}
 
 	public String getNombre() {

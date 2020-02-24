@@ -2,25 +2,24 @@ package apps.metaes.model;
 
 import java.io.Serializable;
 
-public class ConsolidacionVO implements Serializable {
+public class PadronVO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	private Integer idConsolidacion;
+	private Integer idPadron;
 	private String dni;
 	private String nombre;
 	private String email;
 	private String telefonos;
 	private String direccion;
-	private String oracion;
-	private Integer idEvento;
-	private Integer idPadron;
+	private String usuario;
+	private String password;
 
-	public Integer getIdConsolidacion() {
-		return idConsolidacion;
+	public Integer getIdPadron() {
+		return idPadron;
 	}
 
-	public void setIdConsolidacion(Integer idConsolidacion) {
-		this.idConsolidacion = idConsolidacion;
+	public void setIdPadron(Integer idPadron) {
+		this.idPadron = idPadron;
 	}
 
 	public String getDni() {
@@ -63,28 +62,20 @@ public class ConsolidacionVO implements Serializable {
 		this.direccion = direccion;
 	}
 
-	public String getOracion() {
-		return oracion;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setOracion(String oracion) {
-		this.oracion = oracion;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
-	public Integer getIdEvento() {
-		return idEvento;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setIdEvento(Integer idEvento) {
-		this.idEvento = idEvento;
-	}
-
-	public Integer getIdPadron() {
-		return idPadron;
-	}
-
-	public void setIdPadron(Integer idPadron) {
-		this.idPadron = idPadron;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 }

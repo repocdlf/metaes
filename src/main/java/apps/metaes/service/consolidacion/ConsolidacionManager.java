@@ -1,10 +1,10 @@
-package apps.metaes.service;
+package apps.metaes.service.consolidacion;
 
 import java.util.List;
 
-import apps.metaes.model.AvanceVO;
-import apps.metaes.model.ConsolidacionVO;
-import apps.metaes.model.ObservacionVO;
+import apps.metaes.model.consolidacion.AvanceVO;
+import apps.metaes.model.consolidacion.ConsolidacionVO;
+import apps.metaes.model.consolidacion.ObservacionVO;
 
 public interface ConsolidacionManager {
 	public List<ConsolidacionVO> getConsolidaciones(Integer idPadron);

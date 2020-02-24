@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import apps.metaes.service.ConsolidacionManager;
+import apps.metaes.service.consolidacion.ConsolidacionManager;
 
 @Controller
 @RequestMapping(value = "/ConsolidacionController", method = RequestMethod.POST)
@@ -22,7 +22,7 @@ public class ConsolidacionController {
 		model.addAttribute("informes", manager.getInformes(1, 1));
 		return "consolidaciones";
 	}
-	
+
 	@RequestMapping(value = "/getAvances", method = RequestMethod.POST)
 	public String getAvances(Model model, Integer idConsolidacion) {
 		Integer idPadronUsuario = 1;
@@ -30,7 +30,7 @@ public class ConsolidacionController {
 		model.addAttribute("avances", manager.getAvances(idConsolidacion));
 		return "consolidaciones";
 	}
-	
+
 	@RequestMapping(value = "/getInformes", method = RequestMethod.POST)
 	public String getInformes(Model model, Integer idConsolidacion, Integer idAvance) {
 		Integer idPadronUsuario = 1;
