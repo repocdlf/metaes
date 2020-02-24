@@ -16,16 +16,18 @@ public class ConsolidacionManagerImpl implements ConsolidacionManager {
 	@Autowired
 	ConsolidacionDAO dao;
 
+	@Override
 	public List<ConsolidacionVO> getConsolidaciones(Integer idPadron) {
 		return dao.getConsolidaciones(idPadron);
 	}
 
+	@Override
 	public List<AvanceVO> getAvances(Integer idConsolidacion) {
 		return dao.getAvances(idConsolidacion);
 	}
 
 	@Override
-	public List<ObservacionVO> getInformes(Integer idConsolidacion, Integer idAvance) {
-		return dao.getInformes(idConsolidacion, idAvance);
+	public List<ObservacionVO> getObservaciones(Integer idConsolidacion, Integer idAvance) {
+		return dao.getObservaciones(idConsolidacion, idAvance);
 	}
 }

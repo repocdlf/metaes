@@ -19,7 +19,7 @@ public class ConsolidacionController {
 		Integer idPadronUsuario = 1;
 		model.addAttribute("consolidaciones", manager.getConsolidaciones(idPadronUsuario));
 		model.addAttribute("avances", manager.getAvances(1));
-		model.addAttribute("informes", manager.getInformes(1, 1));
+		model.addAttribute("informes", manager.getObservaciones(1, 1));
 		return "consolidaciones";
 	}
 
@@ -36,7 +36,7 @@ public class ConsolidacionController {
 		Integer idPadronUsuario = 1;
 		model.addAttribute("consolidaciones", manager.getConsolidaciones(idPadronUsuario));
 		model.addAttribute("avances", manager.getAvances(idConsolidacion));
-		model.addAttribute("informes", manager.getInformes(idConsolidacion, idAvance));
+		model.addAttribute("informes", manager.getObservaciones(idConsolidacion, idAvance));
 		return "consolidaciones";
 	}
 

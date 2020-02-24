@@ -148,7 +148,7 @@ public class ConsolidacionDAOImpl implements ConsolidacionDAO {
 	}
 
 	@Override
-	public List<ObservacionVO> getInformes(Integer idConsolidacion, Integer idAvance) {
+	public List<ObservacionVO> getObservaciones(Integer idConsolidacion, Integer idAvance) {
 		List<ObservacionVO> obs = new ArrayList<ObservacionVO>();
 
 		ObservacionVO ob1 = new ObservacionVO();

@@ -17,26 +17,22 @@ public class CelulaManagerImpl implements CelulaManager {
 
 	@Override
 	public CelulaVO getCelula(Integer idCelula) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.getCelula(idCelula);
 	}
 
 	@Override
 	public List<CelulaVO> getCelulas(Integer idCelula) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.getCelulas(idCelula);
 	}
 
 	@Override
 	public ConcurrenteVO getConcurrente(Integer idConcurrente) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.getConcurrente(idConcurrente);
 	}
 
 	@Override
 	public List<ConcurrenteVO> getConcurrentes(Integer idCelula) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.getConcurrentes(idCelula);
 	}
 
 }

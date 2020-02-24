@@ -9,5 +9,5 @@ import apps.metaes.model.consolidacion.ObservacionVO;
 public interface ConsolidacionDAO {
 	public List<ConsolidacionVO> getConsolidaciones(Integer idPadron);
 	public List<AvanceVO> getAvances(Integer idConsolidacion);
-	public List<ObservacionVO> getInformes(Integer idConsolidacion, Integer idAvance);
+	public List<ObservacionVO> getObservaciones(Integer idConsolidacion, Integer idAvance);
 }

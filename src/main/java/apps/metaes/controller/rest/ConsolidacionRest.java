@@ -20,26 +20,42 @@ public class ConsolidacionRest {
 	@Autowired
 	ConsolidacionManager manager;
 
+	/**
+	 * Obtiene las consolidaciones del usuario indicado
+	 * 
+	 * @param idPadron
+	 * @return
+	 */
 	@GetMapping(value = "/getConsolidaciones")
 	public List<ConsolidacionVO> getConsolidaciones(
-			@RequestParam(value = "idPadron", defaultValue = "0") Integer idPadron
-			) {
+			@RequestParam(value = "idPadron", defaultValue = "0") Integer idPadron) {
 		return manager.getConsolidaciones(idPadron);
 	}
 
+	/**
+	 * Obtiene los avances de una consolidacion especifica
+	 * 
+	 * @param idConsolidacion
+	 * @return
+	 */
 	@GetMapping(value = "/getAvances")
 	public List<AvanceVO> getAvances(
-			@RequestParam(value = "idConsolidacion", defaultValue = "0") Integer idConsolidacion
-			) {
+			@RequestParam(value = "idConsolidacion", defaultValue = "0") Integer idConsolidacion) {
 		return manager.getAvances(idConsolidacion);
 	}
 
-	@GetMapping(value = "/getInformes")
+	/**
+	 * Obtiene las observaciones de una consolidacion y un avance indicado
+	 * 
+	 * @param idConsolidacion
+	 * @param idAvance
+	 * @return
+	 */
+	@GetMapping(value = "/getObservaciones")
 	public List<ObservacionVO> getInformes(
 			@RequestParam(value = "idConsolidacion", defaultValue = "0") Integer idConsolidacion,
-			@RequestParam(value = "idAvance", defaultValue = "0") Integer idAvance
-			) {
-		return manager.getInformes(idConsolidacion, idAvance);
+			@RequestParam(value = "idAvance", defaultValue = "0") Integer idAvance) {
+		return manager.getObservaciones(idConsolidacion, idAvance);
 	}
 
 }
