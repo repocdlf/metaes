@@ -1,4 +1,4 @@
-package apps.metaes.controller;
+package apps.metaes.controller.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
