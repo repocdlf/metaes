@@ -21,9 +21,9 @@
                 <div class="card-body">
                     <h5 class="card-title">Ingreso a Metaes</h5>
                     <p class="card-text">Registros de actividades y eventos. Notas de avance, seguimiento y reportes de resultados.</p>
-                    <form role="form" autocomplete="on" class="form" method="get" action="/metaes/LoginController/getLogin">
+                    <form role="form" autocomplete="on" class="form" method="get" action="/metaes-rest/LoginController/getLogin">
                         <div class="form-group">
-                            <input class="btn btn-outline-primary btn-block" onclick="window.location.href='/metaes/LoginController/getLogin'" value="Ingresar" type="button">
+                            <input class="btn btn-outline-primary btn-block" onclick="window.location.href='/metaes-rest/LoginController/getLogin'" value="Ingresar" type="button">
                         </div>
                     </form>
                 </div>
@@ -84,28 +84,5 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row mb-1">
-
-        <div class="col-sm-3 mb-3">
-            <div class="card border-primary">
-                <div class="card-header">
-                    PRUEBA CONTROLLER
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Datos desde un Controller</h5>
-                    <p class="card-text">Obtener datos desde el backend controller.</p>
-                    <form role="form" autocomplete="on" class="form" method="post"
-                          action="/metaes/EmployeeController/getAllEmployees">
-                        <div class="form-group">
-                            <input name="metaes-submit" class="btn btn-outline-primary btn-block" value="Ver Datos"
-                                   type="submit">
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 </html>

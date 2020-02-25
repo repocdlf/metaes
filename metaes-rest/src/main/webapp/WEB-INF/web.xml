@@ -16,17 +16,17 @@
     </context-param>
 
 	<servlet>
-		<servlet-name>metaes</servlet-name>
+		<servlet-name>metaes-rest</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value></param-value>
         </init-param>
-		<load-on-startup>1</load-on-startup>
+		<load-on-startup>100000</load-on-startup>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>metaes</servlet-name>
+		<servlet-name>metaes-rest</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 

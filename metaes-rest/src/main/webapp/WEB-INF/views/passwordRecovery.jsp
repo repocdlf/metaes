@@ -34,7 +34,7 @@
 
 <body>
 <div class="login-form">
-    <form id="recovery-form" role="form" autocomplete="on" class="form" method="post" action="/metaes/LoginController/doRecoveryPass">
+    <form id="recovery-form" role="form" autocomplete="on" class="form" method="post" action="/metaes-rest/LoginController/doRecoveryPass">
         <h2 class="text-center">¿Olvidaste tu Clave?</h2>    
         <p class="text-center">Puedes Recuperar tu Clave Aqui</p>   
         <div class="form-group">
@@ -44,9 +44,9 @@
           <input name="recover-submit" class="btn btn-lg btn-primary btn-block" value="Recuperar Clave" type="submit">
         </div>
     </form>
-    <form id="cancel-form" role="form" autocomplete="on" class="form" method="get" action="/metaes/LoginController/getLogin">
+    <form id="cancel-form" role="form" autocomplete="on" class="form" method="get" action="/metaes-rest/LoginController/getLogin">
       <div class="form-group">
-        <input name="recover-submit" class="btn-block" value="Cancelar" type="button" onclick="window.location.href='/metaes/LoginController/getLogin'">
+        <input name="recover-submit" class="btn-block" value="Cancelar" type="button" onclick="window.location.href='/metaes-rest/LoginController/getLogin'">
       </div>
     </form>
 </div>

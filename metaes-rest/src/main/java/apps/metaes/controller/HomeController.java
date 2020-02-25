@@ -14,7 +14,7 @@ public class HomeController {
 		return new ModelAndView("redirect:/LoginController/getLogin");
 	}
 
-	@RequestMapping(value = "/metaes", method = RequestMethod.GET)
+	@RequestMapping(value = "/metaes-rest", method = RequestMethod.GET)
 	public ModelAndView getHomePageMetaes(Model model) {
 		// model.addAttribute("employees", manager.getAllEmployees());
 		return new ModelAndView("redirect:/LoginController/getLogin");

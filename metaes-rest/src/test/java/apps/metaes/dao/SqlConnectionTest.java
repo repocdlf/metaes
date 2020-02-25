@@ -17,7 +17,9 @@ public class SqlConnectionTest {
 		//String connectionUrl = "jdbc:sqlserver://(LocalDB)\\MSSQLLocalDB;databaseName=METAES;user=sa;password=admin";
 		//String connectionUrl = "jdbc:sqlserver://LAPTOP-2HNS76DM\\SQLEXPRESS;databaseName=tempdb;integratedSecurity=true";
 		//String connectionUrl = "jdbc:sqlserver://(LocalDB)\\MSSQLLocalDB;databaseName=mytest;integratedSecurity=true";
-		String connectionUrl = "jdbc:sqlserver://localhost:1433;integratedSecurity=true";
+		//String connectionUrl = "jdbc:sqlserver://localhost:1433;integratedSecurity=true";
+		String connectionUrl = "jdbc:sqlserver://localhost;Database=master;Trusted_Connection=True;";
+		//Server=localhost;Database=master;Trusted_Connection=True;
 		//String connectionUrl = "jdbc:sqlserver://localhost:1433;user=sa;password=xdZVH6Am";
 
 		try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
