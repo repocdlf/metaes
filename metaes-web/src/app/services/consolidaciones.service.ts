@@ -11,11 +11,11 @@ export class ConsolidacionesService {
   constructor(protected http: HttpClient) { }
 
   getListOfPeople() : Observable<any>{
-    return this.http.get("http://localhost:4200/assets/MOCK_DATA.json");
+    return this.http.get("metaes-rest/ConsolidacionRest/getConsolidaciones");
   }
 
-  getListOfStatus(): Observable<any>{
-    return this.http.get("http://localhost:4200/assets/MOCK_DATA_AVANCES_PERSONAS.json");
+  test(id : number): Observable<any>{
+    return this.http.get("metaes-rest/ConsolidacionRest/getAvances?idConsolidacion="+id);
   }
 
 }

@@ -25,8 +25,8 @@
             <table id="myTable-c" class="table table-hover">
                 <tbody>
                     <tr *ngFor="let person of people | filter:searchName">
-                        <td id={{person.id}} (click)="getStateByid($event)" >{{ person.first_name + " " + person.last_name}}</td>
-                        <td>{{ person.phone }}</td>
+                        <td id={{person.idConsolidacion}} (click)="getStateByid($event)" >{{ person.nombre}}</td>
+                        <td>{{ person.telefonos }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -42,7 +42,7 @@
             <table id="myTable-c" class="table table-hover">
                 <tbody>
                     <tr *ngFor="let st of status ">
-                        <td>{{ st }}</td>
+                        <td (click)="getInforme(st.nombre)">{{ st.nombre }}</td>
                     </tr>
                 </tbody>
             </table>  
@@ -56,148 +56,15 @@
                 <button type="button" class="btn btn-outline-primary btn-sm" onclick="agregarInforme()">+</button>
             </div>
 
-            <div id="informes-a1" style="display: none">
+            <div id="informes-a1">
                 <table id="myTable-i" class="table table-hover">
-                    <!--
-                <thead>
-                    <tr class="header">
-                        <th>INFORMES</th>
-                    </tr>
-                </thead>
-                -->
                     <tbody>
-                        <tr>
-                            <td>Hablamos nuevamente y estamos viendo los horarios disponibles para que se integre a una celula</td>
-                        </tr>
-                        <tr>
-                            <td>Lo llame para invitarlo nuevamente al culto, quedamos en econtrarnos en catedral</td>
-                        </tr>
-                        <tr>
-                            <td>Realice el primer llamado, conversamos un tiempo sobre como se sitio en la reunion, esta muy contento</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="informes-a2" style="display: none">
-                <table id="myTable-i" class="table table-hover">
-                    <!--
-                <thead>
-                    <tr class="header">
-                        <th>INFORMES</th>
-                    </tr>
-                </thead>
-                -->
-                    <tbody>
-                        <tr>
-                            <td>Hoy comenzo a asistir a una celula, oramos por el y tuvimos un tiempo en donde nos estamos conociendo mas</td>
+                        <tr *ngFor="let actualSt of actualStatus ">
+                            <td>{{ actualSt }}</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-
-            <div id="informes-a3" style="display: none">
-                <table id="myTable-i" class="table table-hover">
-                    <!--
-                <thead>
-                    <tr class="header">
-                        <th>INFORMES</th>
-                    </tr>
-                </thead>
-                -->
-                    <tbody>
-                        <tr>
-                            <td>Viene regularmente al culto</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="informes-a4" style="display: none">
-                <table id="myTable-i" class="table table-hover">
-                    <!--
-                <thead>
-                    <tr class="header">
-                        <th>INFORMES</th>
-                    </tr>
-                </thead>
-                -->
-                    <tbody>
-                        <tr>
-                            <td>Esta semana comenzo la excuela de vida en la mañana</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="informes-a5" style="display: none">
-                <table id="myTable-i" class="table table-hover">
-                    <!--
-                <thead>
-                    <tr class="header">
-                        <th>INFORMES</th>
-                    </tr>
-                </thead>
-                -->
-                    <tbody>
-                        <tr>
-                            <td>Se bautizo el primer miercoles de este mes</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="informes-a6" style="display: none">
-                <table id="myTable-i" class="table table-hover">
-                    <!--
-                <thead>
-                    <tr class="header">
-                        <th>INFORMES</th>
-                    </tr>
-                </thead>
-                -->
-                    <tbody>
-                        <tr>
-                            <td>Finalizo el cuarto modulo de la escuela de vida, participara en la siguiente graduacion</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="informes-a7" style="display: none">
-                <table id="myTable-i" class="table table-hover">
-                    <!--
-                <thead>
-                    <tr class="header">
-                        <th>INFORMES</th>
-                    </tr>
-                </thead>
-                -->
-                    <tbody>
-                        <tr>
-                            <td>Intente contactarlo pero al parecer el numero de telefono fue dado de baja y no ha dejado otro medio de contacto</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div id="informes-a8" style="display: none">
-                <table id="myTable-i" class="table table-hover">
-                    <!--
-                <thead>
-                    <tr class="header">
-                        <th>INFORMES</th>
-                    </tr>
-                </thead>
-                -->
-                    <tbody>
-                        <tr>
-                            <td>Hoy visitamos su casa y compartimos la palabra de Dios alli con su familia</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            </div> 
 
         </div>
     </div>

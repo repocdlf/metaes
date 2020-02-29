@@ -131,17 +131,33 @@ public class ConsolidacionDAOImpl implements ConsolidacionDAO {
 
 	public List<AvanceVO> getAvances(Integer idConsolidacion) {
 		List<AvanceVO> avances = new ArrayList<AvanceVO>();
+		ArrayList<String> desc = new ArrayList<>();
 
 		AvanceVO av1 = new AvanceVO();
 		av1.setIdAvance(1);
 		av1.setNombre("Contactado");
-		av1.setDescripcion("La persona ha sido contactado");
+		
+		desc.add("La persona ha sido contactado");
+		desc.add("Hablamos nuevamente y estamos viendo los horarios disponibles para que se integre a una celula");
+		desc.add("Realice el primer llamado, conversamos un tiempo sobre como se sitio en la reunion, esta muy contento");
+		av1.setDescripcion(desc);
+		avances.add(av1);
+		
+		av1 = new AvanceVO();
+		desc = new ArrayList<String>();
+		av1.setIdAvance(1);
+		av1.setNombre("En Celula");
+		desc.add("La persona se integro a una celula");
+		av1.setDescripcion(desc);
 		avances.add(av1);
 
 		AvanceVO av2 = new AvanceVO();
+		desc = new ArrayList<>();
 		av2.setIdAvance(2);
 		av2.setNombre("En Celula");
-		av2.setDescripcion("La persona se integro a una celula");
+		desc.add("La persona se integro a una celula");
+		desc.add("Hablamos nuevamente y estamos viendo los horarios disponibles para que se integre a una celula");
+		av2.setDescripcion(desc);
 		avances.add(av2);
 
 		return avances;

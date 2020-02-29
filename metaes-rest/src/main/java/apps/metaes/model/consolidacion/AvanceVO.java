@@ -1,13 +1,14 @@
 package apps.metaes.model.consolidacion;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class AvanceVO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Integer idAvance;
 	private String nombre;
-	private String descripcion;
+	private ArrayList<String> descripcion;
 
 	public Integer getIdAvance() {
 		return idAvance;
@@ -25,11 +26,11 @@ public class AvanceVO implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public String getDescripcion() {
+	public ArrayList<String> getDescripcion() {
 		return descripcion;
 	}
 
-	public void setDescripcion(String descripcion) {
+	public void setDescripcion(ArrayList<String> descripcion) {
 		this.descripcion = descripcion;
 	}
 

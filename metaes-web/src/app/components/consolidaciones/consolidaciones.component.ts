@@ -17,7 +17,6 @@ export class ConsolidacionesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPeople();
-    this.getStatus();
   }
 
   getPeople(): void {
@@ -33,32 +32,34 @@ export class ConsolidacionesComponent implements OnInit {
         }
       );
   }
-
-  getStatus() : string[] {
-    return this.status;
+  
+  getInforme(nombre: string) : void {
+     this.actualStatus = []
+     let result = this.status.filter( st => st.nombre === nombre)
+     this.actualStatus.push(...result[0].descripcion);
   }
 
   getStateByid($event: any): void {
     let id = $event.target.id;
     this.status = [];
 
-    this.consolidacionesService.getListOfStatus()
+    this.consolidacionesService.test(id)
       .subscribe(data => {
         let i = 0;
-        while (i < data.length && this.status.length == 0) {
+        while (i < data.length) {
           let person = data[i];
-          if (person.id == id) {
-            this.status.push(...person.status);
+          if (person.idAvance == id) {
+            this.status.push(person);
           }
           i++;
         };
-
       },
         (error) => {
           console.error(error);
         }
       );
- 
+
   }
+
 
 }
