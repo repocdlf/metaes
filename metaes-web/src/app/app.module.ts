@@ -9,13 +9,15 @@ import { ConsolidacionesService } from './services/consolidaciones.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { FormulariosComponent } from './components/formularios/formularios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     ConsolidacionesComponent,
-    FilterPipe
+    FilterPipe,
+    FormulariosComponent
   ],
   imports: [
     BrowserModule,
